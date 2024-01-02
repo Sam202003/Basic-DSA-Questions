@@ -50,7 +50,7 @@ function findSumPair(arr){
 const result = findSumPair([-5,-4,-3,-2,0,2,4,6,8]);
 console.log(result)
 
-
+//O(n) linear time complexity
 
 
 
