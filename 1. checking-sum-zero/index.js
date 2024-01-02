@@ -1,4 +1,4 @@
-//Checking sum zero - Peoblem 1
+//Checking sum zero - Problem 1 [sorted array]
 // [-5,-4,-3,-2,0,2,4,6,8] -> input
 // [-4,4] -> output 
 
@@ -25,11 +25,44 @@
 //        }
 //     }
 // }
+// const res = getSumPairZero([-5,-4,-3,-2,0,2,4,6,8]);
+// console.log(res);
 
-//Optimized solution
+//Optimized solution - Using two pointer technique
 
-const res = getSumPairZero([-5,-4,-3,-2,0,2,4,6,8]);
-console.log(res);
+function findSumPair(arr){
+    let left = 0;
+    let right = arr.length-1;
+
+    while(left < right){
+        sum = arr[left] + arr[right];
+        if(sum === 0){
+            return [arr[left],arr[right]]
+        }else if(sum > 0){
+            right --;
+        }else{
+            left ++;
+        }
+    }
+}
+
+
+const result = findSumPair([-5,-4,-3,-2,0,2,4,6,8]);
+console.log(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
